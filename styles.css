@@ -1,0 +1,212 @@
+.attribution{
+    font-size: 11px; text-align: center;
+}
+
+.attribution a{
+    color: hsl(228, 45%, 44%);
+}
+
+.barlow-semi-condensed-medium {
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .barlow-semi-condensed-semibold {
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+
+.moderate-violet-bg{
+    background-color: #7541c8;
+}
+
+.very-dark-grayish-blue-bg{
+    background-color: #48556a;
+}
+
+.very-dark-blackish-blue-bg{
+    background-color: #19212e;
+}
+
+.white-bg{
+    background-color: #ffffff;
+}
+
+.light-gray-bg{
+    background-color: #cfcfcf;
+}
+
+.light-grayish-blue-bg{
+    background-color: #ecf2f8;
+}
+
+.light-grayish-blue-text{
+    -color: #ecf2f8;
+}
+
+.very-dark-blackish-blue-text{
+    color: #19212e;
+}
+
+.white-text{
+    color: #ffffff;
+}
+
+.light-gray-text{
+    color: #cfcfcf;
+}
+
+.opacity30{
+    opacity: 0.3;
+}
+
+.opacity50{
+    opacity: 0.5;
+}
+
+.opacity70{
+    opacity: 0.7;
+}
+
+body{
+    font-size: 13px;
+    border-style: border-box;
+}
+
+.grid{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5rem;
+    max-width: 90%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    row-gap: 1.6rem;
+    grid-template-areas:
+    "card1"
+    "card2"
+    "card3"
+    "card4"
+    "card5";
+}
+
+.card{
+    width: auto;
+    height: fit-content;
+    border-radius: 10px;
+    padding: 1.6rem 2rem;
+}
+
+.card1{
+    grid-area: card1;
+    background: #7541c8 url("images/bg-pattern-quotation.svg") no-repeat top right;
+    background-position: 90% 0%;
+}
+
+.card2{
+    grid-area: card2;
+}
+
+.card3{
+    grid-area: card3;
+}
+
+.card4{
+    grid-area: card4;
+}
+
+.card5{
+    grid-area: card5;
+}
+
+.icon{
+    z-index: 0;
+    position: absolute;
+    top: 12.5%;
+    right: 10%;
+}
+
+.namebox{
+    display: grid;
+    height: 1.5rem;
+    width: 18rem;
+    margin-bottom: 0;
+    z-index: 2;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 56% 44%;
+    grid-template-areas:
+        "image author"
+        "image job";
+}
+
+.image{
+    border-radius: 50%;
+    width: 1.7rem;
+    border: solid rgba(255, 255, 255, 0.5) 2px;
+    grid-area: image;
+}
+
+.author{
+    font-size: 1em;
+    line-height: 0;
+    letter-spacing: 0.02em;
+    grid-area: author;
+    font-weight: 400;
+}
+
+.job{
+    font-size: 0.90em;
+    line-height: 0;
+    grid-area: job;
+    font-weight: normal;
+}
+
+.header{
+    font-size: 1.6em;
+    letter-spacing: 0.03em;
+    font-weight: 500;
+    margin-bottom: 0rem;
+    z-index: 1;
+}
+
+.paragraph{
+    line-height: 1.5;
+    font-weight: 400;
+    margin-bottom: 0rem;
+    z-index: 1;
+}
+
+@media screen and (min-width: 600px){
+    .grid{
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 8%;
+        width: 60rem;
+        height: 40rem;
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: 1fr 1fr;
+        row-gap: 2rem;
+        column-gap: 2rem;
+        grid-template-areas:
+        "card1 card1 card2 card5"
+        "card3 card4 card4 card5";
+    }
+
+    .card{
+        width: auto;
+        height: auto;
+        border-radius: 10px;
+        padding: 1.6rem 2rem;
+    }
+
+    .attribution{
+        font-size: 11px; text-align: center;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
